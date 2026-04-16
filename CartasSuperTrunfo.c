@@ -1,24 +1,22 @@
 #include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+#include <stdlib.h>
 
 int main()
    {
-char carta, cidade, estado ; //inserindo variaveis tipo caractere
-int codigo, populacao, area, pib, turisticos; // inserindo variaveis tipo inteiro
+char carta[10], cidade[20], estado[21]; //inserindo variaveis tipo caractere
+int codigo, populacao, turisticos; // inserindo variaveis tipo inteiro
+float area, pib, densidade, capita; //tipo float/double
 
 printf("carta 1 \n\n"); // dados da carta 1
 
-printf("Estado: ",estado); //impressão
-scanf("%c", &estado);      //declaração de variáveis
+printf("Estado: "); //impressão
+scanf("%s", estado);      //declaração de variáveis
 
-printf("codigo: ",codigo);
+printf("codigo: ");
 scanf("%d", &codigo);
 
-printf("cidade: ",cidade);
-scanf(" %c", &cidade);
+printf("cidade: ");
+scanf("%s", cidade);
 
 printf("Populacao: ");
 scanf("%d", &populacao);
@@ -32,6 +30,13 @@ scanf("%f", &pib);
 printf("Numero de Pontos Turisticos: ");
 scanf("%d", &turisticos);
 
+densidade = (float) populacao / area;
+capita = pib / populacao;
+
+printf("Densidade Populacional: %.2f\n", densidade);
+
+printf("PIB per Capita: %.2f\n", capita);
+
 
 //Agora vai ser inserido os dados da carta 2
 //=========================================
@@ -39,14 +44,14 @@ scanf("%d", &turisticos);
 
 printf("\n\ncarta 2 \n\n"); //dados da carta 2
 
-printf("Estado: ",estado);  //impressão
-scanf("%c", &estado);       //declaração de variáveis
+printf("Estado: "); //impressão
+scanf("%s", estado);      //declaração de variáveis
 
-printf("codigo: ",codigo);
+printf("codigo: ");
 scanf("%d", &codigo);
 
-printf("cidade: ",cidade);
-scanf(" %c", &cidade);
+printf("cidade: ");
+scanf("%s", cidade);
 
 printf("Populacao: ");
 scanf("%d", &populacao);
@@ -57,9 +62,16 @@ scanf("%f", &area);
 printf("PIB: ");
 scanf("%f", &pib);
 
-printf("Numero de Pontos Turisticos ");
+printf("Numero de Pontos Turisticos: ");
 scanf("%d", &turisticos);
 
-    return 0; //função retorna um valor 
+densidade = (float) populacao / area;
+capita = pib / populacao;
+
+printf("Densidade Populacional: %.2f\n", densidade);
+
+printf("PIB per Capita: %.2f\n", capita);
+
+    return 0; //função retorna um valor
 
    }
